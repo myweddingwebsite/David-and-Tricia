@@ -284,6 +284,18 @@
   .swatch-label{font-size:0.9rem;}
   .swatch-role{font-size:0.72rem; color:#888; text-transform:uppercase; letter-spacing:0.08em;}
 
+  /* ============ NOTES ============ */
+  .notes-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;}
+  .note-card{padding:36px 30px; text-align:center;}
+  .note-icon{
+    width:52px; height:52px; border-radius:50%; background:var(--cream);
+    border:1px solid rgba(111,125,87,0.25);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+  }
+  .note-icon svg{width:24px; height:24px; stroke:var(--olive); fill:none;}
+  .note-card h3{font-size:1.12rem; margin-bottom:10px;}
+  .note-card p{font-size:0.9rem; color:#666; font-weight:300; line-height:1.65;}
+
   /* ============ RSVP ============ */
   .rsvp{text-align:center;}
   .rsvp-card{max-width:560px; margin:0 auto; padding:64px 40px;}
@@ -350,6 +362,7 @@
       <li><a href="#timeline" data-nav>Timeline</a></li>
       <li><a href="#entourage" data-nav>Entourage</a></li>
       <li><a href="#attire" data-nav>Attire</a></li>
+      <li><a href="#notes" data-nav>Notes</a></li>
       <li><a href="#rsvp" data-nav>RSVP</a></li>
     </ul>
   </div>
@@ -396,7 +409,7 @@
       <div class="glass detail-card reveal-left">
         <div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
         <div class="eyebrow">Ceremony</div>
-        <h3>2:30 PM</h3>
+        <h3>12:00 PM</h3>
         <div class="detail-venue">Kingdom Hall Of Jehovah Witness</div>
         <div class="detail-addr">BS. Aquino Avenue, Baliuag, Bulacan</div>
         <div class="detail-actions">
@@ -413,7 +426,7 @@
       <div class="glass detail-card reveal-right">
         <div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
         <div class="eyebrow">Reception</div>
-        <h3>6:00 PM</h3>
+        <h3>2:30 PM</h3>
         <div class="detail-venue">8 Waves Waterpark &amp; Hotel</div>
         <div class="detail-addr">Doña Remedios Trinidad Highway, Ulingao, San Rafael, Bulacan</div>
         <div class="detail-actions">
@@ -447,46 +460,39 @@
     </div>
     <div class="timeline">
       <div class="t-item reveal">
-        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h10" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="t-time">2:30 PM</div>
-        <div class="t-title">Entourage Procession</div>
-      </div>
-      <div class="t-item reveal">
         <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z" stroke-width="1.6"/></svg></div>
-        <div class="t-time">3:00 PM</div>
-        <div class="t-title">Wedding Ceremony</div>
-        <div class="t-sub">Holy Eucharist &amp; Exchange of Vows</div>
+        <div class="t-time">12:00 PM</div>
+        <div class="t-title">Ceremony</div>
       </div>
       <div class="t-item reveal">
-        <div class="t-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="t-time">4:45 PM</div>
-        <div class="t-title">Cocktail Hour</div>
-        <div class="t-sub">Garden &amp; Golden Hour Photos</div>
+        <div class="t-dot"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" stroke-width="1.6"/><circle cx="12" cy="12.5" r="3.5" stroke-width="1.6"/><path d="M8 6l1.5-3h5L16 6" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="t-time">1:45 PM</div>
+        <div class="t-title">Photos</div>
       </div>
       <div class="t-item reveal">
         <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M4 20h16M8 20V10l4-6 4 6v10" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <div class="t-time">6:00 PM</div>
-        <div class="t-title">Reception Entrance &amp; Program</div>
-      </div>
-      <div class="t-item reveal">
-        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M12 3v18M6 9c0-3 2-6 6-6s6 3 6 6-2 6-6 6-6-3-6-6z" stroke-width="1.6"/></svg></div>
-        <div class="t-time">6:30 PM</div>
-        <div class="t-title">First Dance &amp; Parent Dances</div>
-      </div>
-      <div class="t-item reveal">
-        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M8 4v6a4 4 0 008 0V4M12 14v6M9 20h6" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="t-time">7:00 PM</div>
-        <div class="t-title">Words of Advice &amp; Toasts</div>
+        <div class="t-time">2:30 PM</div>
+        <div class="t-title">Reception</div>
       </div>
       <div class="t-item reveal">
         <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M6 2h12l-1 8a5 5 0 01-10 0L6 2zM12 15v6M9 21h6" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-        <div class="t-time">7:15 PM</div>
-        <div class="t-title">Dinner &amp; Open Dancing</div>
+        <div class="t-time">3:30 PM</div>
+        <div class="t-title">Early Dinner</div>
       </div>
       <div class="t-item reveal">
-        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-        <div class="t-time">8:30 PM</div>
-        <div class="t-title">Fireworks &amp; Same-Day Edit Screening</div>
+        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M4 21v-6a4 4 0 014-4h8a4 4 0 014 4v6M4 21h16M9 11V7a3 3 0 016 0v4" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="t-time">4:30 PM</div>
+        <div class="t-title">Cake Cutting</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M12 3v18M6 9c0-3 2-6 6-6s6 3 6 6-2 6-6 6-6-3-6-6z" stroke-width="1.6"/></svg></div>
+        <div class="t-time">5:00 PM</div>
+        <div class="t-title">First Dance</div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"><svg viewBox="0 0 24 24"><path d="M2 16l20-8-8 20-2-8-10-4z" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="t-time">5:30 PM</div>
+        <div class="t-title">Send Off</div>
       </div>
     </div>
   </div>
@@ -592,6 +598,40 @@
   </div>
 </section>
 
+<svg class="vine-divider reveal-zoom" viewBox="0 0 560 40">
+  <path class="vine-path" d="M10 20 Q 140 40, 280 20 T 550 20"/>
+  <circle class="vine-leaf" cx="140" cy="32" r="4"/>
+  <circle class="vine-leaf" cx="280" cy="20" r="5"/>
+  <circle class="vine-leaf" cx="420" cy="32" r="4"/>
+</svg>
+
+<!-- ============ NOTES FOR GUESTS ============ -->
+<section id="notes">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Before You RSVP</div>
+      <h2>A Few Gentle Notes</h2>
+    </div>
+    <div class="notes-grid">
+      <div class="glass note-card reveal">
+        <div class="note-icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="10" height="18" rx="1.5" stroke-width="1.6"/><circle cx="10" cy="8" r="2" stroke-width="1.6"/><path d="M8 13h4M8 16h4" stroke-width="1.6" stroke-linecap="round"/><path d="M15 16l6-6-2-2-6 6" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Flight Policy</h3>
+        <p>While we would love to celebrate with everyone, we kindly ask that only the indicated number of guest(s) join us due to limited seating. Thank you for your understanding.</p>
+      </div>
+      <div class="glass note-card reveal">
+        <div class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 8v13M3 8h18l-1.5 4H4.5L3 8zM12 8c-2 0-3-1.2-3-2.5S9.8 3 11 3s1.5 1.5 1 2.5M12 8c2 0 3-1.2 3-2.5S14.2 3 13 3s-1.5 1.5-1 2.5" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3>Gifting</h3>
+        <p>We look forward most to your presence, not your presents. However, if you wish to give something, a small envelope would be thrilling.</p>
+      </div>
+      <div class="glass note-card reveal">
+        <div class="note-icon"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 3h12l-1 8a5 5 0 01-10 0L6 3z" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 9c2-1 2-3 0-4M7 9c-2-1-2-3 0-4" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>A Gentle Note</h3>
+        <p>We appreciate your support in keeping our celebration free from superstitious customs, such as dove releasing or glass clinking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ RSVP ============ -->
 <section id="rsvp" class="rsvp">
   <div class="container">
@@ -624,7 +664,7 @@
   });
 
   // Countdown
-  var target = new Date('2026-09-01T14:30:00+08:00').getTime();
+  var target = new Date('2026-09-01T12:00:00+08:00').getTime();
   function tick(){
     var now = Date.now();
     var diff = target - now;
